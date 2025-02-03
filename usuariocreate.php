@@ -16,66 +16,48 @@
         <!-- Incluindo o Nav  -->
     <?php include ('nav.php'); ?>
 
-
-    <!-- Botão de Voltar -->
     <div class="container mt-4">
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
                     <h4>Adicionar Usuarios
-                        <a class="btn btn-danger float-end" href="index.php">Voltar</a> </h4>
+                        <a class="btn btn-primary float-end" href="index.php">Voltar</a> </h4>
                 </div>
 
-            <!-- Final do botão e cabeçalho -->
+                <div class="card-body">
+                    <form action="acoes.php" method="$_POST">
+                        <div class="mb-3">
+                            <label> Nome:</label>
+                            <input type="text" name="nome" class="form-control">
+                        </div>
 
+                        <div class="mb-3">
+                            <label> Email:</label>
+                            <input type="text" name="email" class="form-control">
+                        </div>
 
-            <!-- Inicio dos campos do formulario -->
+                        <div class="mb-3">
+                            <label> Data Nascimento:</label>
+                            <input type="date" name="data_nasc" class="form-control">
+                        </div>
 
-              <div class="card-body">
-                <form action="acoes.php" method="POST">
-                    <div class="mb-2">
-                        <label>Nome:</label>
-                            <input type="text" class="form-control">
-                    </div>
-                </form>
-              </div>
+                        <div class="mb-3">
+                            <label> Senha:</label>
+                            <input type="password" name="senha" class="form-control">
+                        </div>
 
-              <div class="card-body">
-                <form action="" method="POST">
-                    <div class="mb-2">
-                        <label>Email:</label>
-                            <input type="text" class="form-control">
-                    </div>
-                </form>
-              </div>
-
-              <div class="card-body">
-                <form action="" method="POST">
-                    <div class="mb-2">
-                        <label>Data Nascimento:</label>
-                            <input type="date" class="form-control">
-                    </div>
-                </form>
-              </div>
-
-              <div class="card-body">
-                <form action="" method="POST">
-                    <div class="mb-2">
-                        <label>Senha:</label>
-                            <input type="password" class="form-control">
-                    </div>
-                   <button type="submit" name="create_usuario" class="btn btn-primary">Salvar</button>
-                </form>
-              </div>
-
-
+                            <div class="mb-3">
+                                <button type="submit" name="create_usuario" class="btn btn-primary">Salvar</button>
+                            </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-    </div>
-   
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+ </div>
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
    
   </body>
