@@ -1,9 +1,9 @@
 <?php 
-define('HOST','');
-define('USUARIO','');
+define('HOST','127.0.0.1');
+define('USUARIO','root');
 define('SENHA','');
+define('DB','crud');
 
-
-$conexao = mysqli_connect(HOST,USUARIO,SENHA) or die ("Não foi possivel Conectar")
+$conexao = mysqli_connect(HOST,USUARIO,SENHA,DB) or die ("Não foi possivel Conectar")
 
 ?>  
