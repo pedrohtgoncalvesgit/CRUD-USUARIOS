@@ -1,5 +1,7 @@
-<?php require 'conexao.php' ?>
-
+<?php
+session_start();
+require 'conexao.php'
+?>
 
 <!doctype html>
 <html lang="pt-br">
@@ -18,6 +20,7 @@
 
     <div class="container mt-4">
         <div class="row">
+         
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
@@ -26,7 +29,7 @@
                 </div>
 
                 <div class="card-body">
-                    <form action="acoes.php" method="$_POST">
+                    <form action="acoes.php" method="POST">
                         <div class="mb-3">
                             <label> Nome:</label>
                             <input type="text" name="nome" class="form-control">

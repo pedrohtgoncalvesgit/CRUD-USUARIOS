@@ -1,4 +1,6 @@
-<?php require 'conexao.php' ?>
+<?php
+require 'conexao.php' 
+?>
 
 
 <!doctype html>
@@ -17,6 +19,7 @@
     <?php include ('nav.php'); ?>
 
     <div class="container mt-4">
+    
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
@@ -36,11 +39,18 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <?php
+                            $sql='select * from usuarios';
+                            $usuarios = mysqli_query($conexao,$sql);
+                            if(mysqli_num_rows($usuarios)>0){
+                            foreach ($usuarios as $usuario){
+
+                            ?>
                             <tr>
-                                <td>1</td>
-                                <td>Pedro</td>
-                                <td>pedro@gmail.com</td>
-                                <td>14/12/2004</td>
+                                <td><?=$usuario['idusuarios']?></td>
+                                <td><?=$usuario['nome']?></td>
+                                <td><?=$usuario['email']?></td>
+                                <td><?= date('d/w/Y',strtotime($usuario['data_nasc']))?></td>
                                 <td>
                                     <a class="btn btn-primary btn-sm" href="">Visualizar</a>
                                     <a class="btn btn-warning btn-sm text-white" href="">Editar</a>
@@ -50,6 +60,12 @@
                                     </button></form>
                                 </td>
                             </tr>
+                           <?php
+                        }
+                       }else{
+                            echo("<h5>Nenhum usuario cadastrado </h5>");
+                        }
+                          ?>
                         </tbody>
                     </table>
                 </div>
