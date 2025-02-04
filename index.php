@@ -52,7 +52,7 @@ require 'conexao.php'
                                 <td><?=$usuario['email']?></td>
                                 <td><?= date('d/w/Y',strtotime($usuario['data_nasc']))?></td>
                                 <td>
-                                    <a class="btn btn-warning btn-sm text-white" href="">Editar</a>
+                                    <a class="btn btn-warning btn-sm text-white" href="createeditar.php?id=<?=$usuario['idusuarios']?>">Editar</a>
                                     <form action="" method="post" class="d-inline">
                                     <button type="submit" class="btn btn-danger btn-sm" name="delete_usuarios">
                                         Excluir
